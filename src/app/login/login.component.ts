@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   private checkCredentials(signInForm: NgForm) {
-    const signInData = new SignInData(signInForm.value.login, signInForm.value.password);
+    const signInData = new SignInData(signInForm.value.userName, signInForm.value.password);
     if (!this.authenticationService.authenticate(signInData)) {
       this.isFormValid = false;
       this.areCredentialsInvalid = true;
